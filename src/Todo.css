@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
   padding: 10px;
 }
 
@@ -14,12 +13,20 @@
 }
 
 .delete-button {
-  border: 1px solid var(--color-red);
+  /* border: 1px solid var(--color-red); */
+  padding: .375rem .75rem;
   color: var(--color-red);
   background-color: #fff;
 }
 
-.delete-button:hover {
+@media(max-width: 576px){
+  .delete-button {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* .delete-button:hover {
   color: #fff;
   background-color: var(--color-red);
-}
+} */
