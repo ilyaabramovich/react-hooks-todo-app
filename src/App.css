@@ -1,8 +1,20 @@
 .todo-list {
-  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
   list-style: none;
+  border: 1px solid #ededed;
+  border-radius: 0.25rem;
 }
+
+.todo-list li:last-child {
+  border-bottom: none;
+}
+
+.todo-list li {
+  border-bottom: 1px solid #ededed;
+
+}
+
 
 .container {
   width: 100%;

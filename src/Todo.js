@@ -14,7 +14,7 @@ const Todo = ({ todo, onDelete }) => {
 
   return (
     <div className="todo" tabIndex="0" onKeyDown={handleKeyDown}>
-      <p>{todo.text}</p>
+      <p className="todo-text">{todo.text}</p>
       <button className="delete-button" onClick={handleDelete}>
         X
       </button>
