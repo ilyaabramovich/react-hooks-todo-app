@@ -6,19 +6,19 @@ const App = () => {
   const initialTodos = () => JSON.parse(localStorage.getItem("todos")) || [];
 
   const [todos, setTodos] = useState(initialTodos);
-  const [todo, setTodo] = useState("");
+  const [text, setText] = useState("");
 
-  const handleInputChange = event => {
-    setTodo(event.target.value);
+  const handleChange = event => {
+    setText(event.target.value);
   };
 
-  const onAddTodo = event => {
+  const handleSubmit = event => {
     event.preventDefault();
-    setTodos([...todos, { text: todo, id: Date.now() }]);
-    setTodo("");
+    setTodos([...todos, { text, id: Date.now() }]);
+    setText("");
   };
 
-  const handleTodoDelete = id => {
+  const handleDelete = id => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
@@ -26,6 +26,7 @@ const App = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
     setTodos(todos);
   }, [todos]);
+
   return (
     <div className="container">
       <h1 className="header text-center">TODO</h1>
@@ -33,28 +34,28 @@ const App = () => {
         {todos.length ? (
           todos.map(todo => (
             <li key={todo.id}>
-              <Todo todo={todo} onDelete={handleTodoDelete} />
+              <Todo todo={todo} onDelete={handleDelete} />
             </li>
           ))
         ) : (
-          <p>You have no todos. Add some.</p>
-        )}
+            <p>You have no todos. Add some.</p>
+          )}
       </ul>
       <form>
         <div className="form-group">
           <input
             className="form-control"
             type="text"
-            value={todo}
-            onChange={handleInputChange}
+            value={text}
+            onChange={handleChange}
             placeholder="Enter new TODO"
           />
         </div>
         <button
           type="submit"
-          disabled={!todo}
+          disabled={!text}
           className="submit-button"
-          onClick={onAddTodo}
+          onClick={handleSubmit}
         >
           Add
         </button>
