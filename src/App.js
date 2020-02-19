@@ -30,17 +30,17 @@ const App = () => {
   return (
     <div className="container">
       <h1 className="header text-center">TODO</h1>
-      <ul className="todo-list">
         {todos.length ? (
-          todos.map(todo => (
+      <ul className="todo-list">
+          {todos.map(todo => (
             <li key={todo.id}>
               <Todo todo={todo} onDelete={handleDelete} />
             </li>
-          ))
+          ))}
+      </ul>
         ) : (
             <p>You have no todos. Add some.</p>
           )}
-      </ul>
       <form>
         <div className="form-group">
           <input
