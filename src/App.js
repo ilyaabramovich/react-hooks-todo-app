@@ -44,6 +44,7 @@ const App = () => {
       <form>
         <div className="form-group">
           <input
+            autoFocus={true}
             className="form-control"
             type="text"
             value={text}
