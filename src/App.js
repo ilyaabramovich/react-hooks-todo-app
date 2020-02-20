@@ -16,6 +16,10 @@ const App = () => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
+  const handleClear = () => {
+    setTodos([]);
+  };
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
     setTodos(todos);
@@ -25,7 +29,7 @@ const App = () => {
     <div className="container">
       <h1 className="header text-center">TODO</h1>
       {todos.length ? (
-        <TodoList todos={todos} onDelete={handleDelete} />
+        <TodoList todos={todos} onDelete={handleDelete} onClear={handleClear} />
       ) : (
           <p>You have no todos. Add some.</p>
         )}
