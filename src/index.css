@@ -2,6 +2,8 @@
   --color-white: #f3f3f3;
   --color-green: #37af65;
   --color-red: #dc3545;
+  --color-gray: #495057;
+  --color-lightgray: #ced4da;
 }
 
 *,
@@ -23,6 +25,7 @@ body {
 }
 
 h1 {
+  color: var(--color-gray);
   font-weight: 400;
   line-height: 1.2;
 }
