@@ -1,7 +1,8 @@
 import React from "react";
 import "./Todo.css";
 
-const Todo = ({ todo, onDelete }) => {
+export const Todo = ({ todo, onDelete }) => {
+  console.log("here")
   const handleKeyDown = event => {
     if (event.key === "Delete") {
       onDelete(todo.id);
@@ -21,5 +22,3 @@ const Todo = ({ todo, onDelete }) => {
     </div>
   );
 };
-
-export default Todo;

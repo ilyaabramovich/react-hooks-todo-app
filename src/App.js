@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Todo from "./Todo";
+import { TodoList } from "./TodoList";
 import "./App.css";
+import { AddTodoForm } from "./AddTodoForm";
 
 const App = () => {
   const initialTodos = () => JSON.parse(localStorage.getItem("todos")) || [];
 
   const [todos, setTodos] = useState(initialTodos);
-  const [text, setText] = useState("");
 
-  const handleChange = event => {
-    setText(event.target.value);
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
+  const handleSubmit = text => {
     setTodos([...todos, { text, id: Date.now() }]);
-    setText("");
   };
 
   const handleDelete = id => {
@@ -30,37 +24,12 @@ const App = () => {
   return (
     <div className="container">
       <h1 className="header text-center">TODO</h1>
-        {todos.length ? (
-      <ul className="todo-list">
-          {todos.map(todo => (
-            <li key={todo.id}>
-              <Todo todo={todo} onDelete={handleDelete} />
-            </li>
-          ))}
-      </ul>
-        ) : (
-            <p>You have no todos. Add some.</p>
-          )}
-      <form>
-        <div className="form-group">
-          <input
-            autoFocus={true}
-            className="form-control"
-            type="text"
-            value={text}
-            onChange={handleChange}
-            placeholder="Enter new TODO"
-          />
-        </div>
-        <button
-          type="submit"
-          disabled={!text}
-          className="submit-button"
-          onClick={handleSubmit}
-        >
-          Add
-        </button>
-      </form>
+      {todos.length ? (
+        <TodoList todos={todos} onDelete={handleDelete} />
+      ) : (
+          <p>You have no todos. Add some.</p>
+        )}
+      <AddTodoForm onSubmit={handleSubmit} />
     </div>
   );
 };
