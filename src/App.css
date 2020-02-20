@@ -1,5 +1,5 @@
 .todo-list {
-  margin-bottom: 1.25rem;
+  margin: 0;
   padding: 0;
   list-style: none;
   border: 1px solid var(--color-lightgray);
@@ -14,7 +14,6 @@
   border-bottom: 1px solid var(--color-lightgray);
 
 }
-
 
 .container {
   width: 100%;
