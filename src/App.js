@@ -27,18 +27,20 @@ const App = () => {
   }, [todos]);
 
   return (
-    <div className="container">
+    <>
       <h1 className="header text-center">TODO</h1>
-      {todos.length ? (
-        <>
-          <TodoList todos={todos} onDelete={handleDelete} />
-          <ToolBar todos={todos} onClear={handleClear} />
-        </>
-      ) : (
-        <p>You have no todos. Add some.</p>
-      )}
-      <AddTodoForm onSubmit={handleSubmit} />
-    </div>
+      <div className="container">
+        {todos.length ? (
+          <>
+            <TodoList todos={todos} onDelete={handleDelete} />
+            <ToolBar todos={todos} onClear={handleClear} />
+          </>
+        ) : (
+          <p>You have no todos. Add some.</p>
+        )}
+        <AddTodoForm onSubmit={handleSubmit} />
+      </div>
+    </>
   );
 };
 

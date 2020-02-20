@@ -1,7 +1,3 @@
-.todo-count {
-  color: var(--color-gray);
-}
-
 .toolbar {
   padding: 1rem 0;
   display: flex;
