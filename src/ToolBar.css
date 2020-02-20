@@ -1,6 +1,5 @@
-
 .todo-count {
-  color: var(--color-gray)
+  color: var(--color-gray);
 }
 
 .toolbar {
@@ -11,7 +10,7 @@
 }
 
 .clear-button {
-  border:none;
+  border: none;
   background: 0;
   color: var(--color-gray);
 }
