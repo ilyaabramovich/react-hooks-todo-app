@@ -1,7 +1,7 @@
 import React from "react";
 import { TodoList } from "./TodoList";
 import { AddTodoForm } from "./AddTodoForm";
-import { ToolBar } from "./ToolBar";
+import { Toolbar } from "./Toolbar";
 import { useLocalStorage } from "../hooks";
 import "./App.css";
 
@@ -29,7 +29,7 @@ const App = () => {
         {todos.length ? (
           <>
             <TodoList todos={todos} onDelete={handleDelete} />
-            <ToolBar todos={todos} onClear={handleClear} />
+            <Toolbar count={todos.length} onClear={handleClear} />
           </>
         ) : (
           <p className="page__paragraph">You have no todos. Add some.</p>

@@ -1,10 +1,10 @@
 import React from "react";
-import "./ToolBar.css";
+import "./Toolbar.css";
 
-export const ToolBar = ({ todos, onClear }) => {
+export const Toolbar = ({ count, onClear }) => {
   return (
     <div className="toolbar page__toolbar">
-      <span>{`${todos.length} item${todos.length > 1 ? "s" : ""} left`}</span>
+      <span>{`${count} item${count > 1 ? "s" : ""} left`}</span>
       <button className="button toolbar__button" onClick={onClear}>
         Clear all
       </button>
