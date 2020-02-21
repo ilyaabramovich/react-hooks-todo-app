@@ -1,0 +1,5 @@
+.toolbar__button {
+  border: none;
+  background: 0;
+  color: var(--color-gray);
+}

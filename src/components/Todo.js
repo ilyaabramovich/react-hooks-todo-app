@@ -13,9 +13,13 @@ export const Todo = ({ todo, onDelete }) => {
   };
 
   return (
-    <li className="todo" tabIndex="0" onKeyDown={handleKeyDown}>
-      <p className="todo-text">{todo.text}</p>
-      <button className="delete-button" onClick={handleDelete}>
+    <li
+      className="todo-item todo-list__item"
+      tabIndex="0"
+      onKeyDown={handleKeyDown}
+    >
+      <p className="todo-item__text">{todo.text}</p>
+      <button className="todo-item__button" onClick={handleDelete}>
         X
       </button>
     </li>

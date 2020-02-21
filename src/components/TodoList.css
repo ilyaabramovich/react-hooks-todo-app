@@ -1,0 +1,15 @@
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--color-lightgray);
+  border-radius: 0.25rem;
+}
+
+.todo-list .todo-list__item:last-child {
+  border-bottom: none;
+}
+
+.todo-list .todo-list__item {
+  border-bottom: 1px solid var(--color-lightgray);
+}
