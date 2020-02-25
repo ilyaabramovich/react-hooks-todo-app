@@ -18,7 +18,7 @@ export const AddTodoForm = ({ onSubmit }) => {
     <form className="add-todo-form">
       <div className="add-todo-form__control">
         <input
-          autoFocus={true}
+          autoFocus
           className="input add-todo-form__input add-todo-form__input_fullwidth"
           type="text"
           value={text}
