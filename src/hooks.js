@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
 export function useLocalStorage(item) {
-  const initialTodos = () => JSON.parse(localStorage.getItem(item)) || [];
+  const initialItems = () => JSON.parse(localStorage.getItem(item)) || [];
 
-  const [todos, setTodos] = useState(initialTodos);
+  const [items, setItems] = useState(initialItems);
 
   useEffect(() => {
-    localStorage.setItem(item, JSON.stringify(todos));
-    setTodos(todos);
-  }, [todos, item]);
+    localStorage.setItem(item, JSON.stringify(items));
+    setItems(items);
+  }, [items, item]);
 
-  return [todos, setTodos];
+  return [items, setItems];
 }
