@@ -1,11 +1,11 @@
 import React, { useCallback } from "react";
-import { TodoList } from "./TodoList";
-import { AddTodoForm } from "./AddTodoForm";
-import { Toolbar } from "./Toolbar";
-import { useLocalStorage } from "../hooks";
+import { TodoList } from "../TodoList";
+import { AddTodoForm } from "../AddTodoForm";
+import { Toolbar } from "../Toolbar";
+import { useLocalStorage } from "../../hooks";
 import "./App.css";
 
-const App = () => {
+export const App = () => {
   const [todos, setTodos] = useLocalStorage("todos");
 
   const handleSubmit = text => {
@@ -40,5 +40,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;

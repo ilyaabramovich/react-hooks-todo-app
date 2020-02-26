@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import "./Todo.css";
 
-export const Todo = memo(({ id, text, onDelete }) => {
+export const Todo = memo(function Todo({ id, text, onDelete }) {
   const handleKeyDown = event => {
     if (event.key === "Delete") {
       onDelete(id);
