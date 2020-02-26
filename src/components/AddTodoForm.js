@@ -23,7 +23,7 @@ export const AddTodoForm = ({ onSubmit }) => {
           type="text"
           value={text}
           onChange={handleChange}
-          placeholder="Enter new TODO"
+          placeholder="New thing to do"
         />
       </div>
       <button
