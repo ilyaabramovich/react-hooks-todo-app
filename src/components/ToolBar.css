@@ -3,3 +3,7 @@
   background: 0;
   color: var(--color-gray);
 }
+
+.toolbar__button:hover {
+  text-decoration: underline;
+}
