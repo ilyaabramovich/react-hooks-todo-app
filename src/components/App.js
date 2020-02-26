@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { TodoList } from "./TodoList";
 import { AddTodoForm } from "./AddTodoForm";
 import { Toolbar } from "./Toolbar";
@@ -12,9 +12,10 @@ const App = () => {
     setTodos([...todos, { text, id: Date.now() }]);
   };
 
-  const handleDelete = id => {
+  const handleDelete = useCallback(id => {
     setTodos(todos.filter(todo => todo.id !== id));
-  };
+    // eslint-disable-next-line
+  }, []);
 
   const handleClear = () => {
     setTodos([]);

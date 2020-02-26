@@ -5,7 +5,7 @@ import "./TodoList.css";
 export const TodoList = ({ todos, onDelete }) => (
   <ul className="todo-list">
     {todos.map(todo => (
-      <Todo key={todo.id} todo={todo} onDelete={onDelete} />
+      <Todo key={todo.id} {...todo} onDelete={onDelete} />
     ))}
   </ul>
 );

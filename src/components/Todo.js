@@ -1,15 +1,15 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Todo.css";
 
-export const Todo = ({ todo, onDelete }) => {
+export const Todo = memo(({ id, text, onDelete }) => {
   const handleKeyDown = event => {
     if (event.key === "Delete") {
-      onDelete(todo.id);
+      onDelete(id);
     }
   };
 
   const handleDelete = () => {
-    onDelete(todo.id);
+    onDelete(id);
   };
 
   return (
@@ -18,10 +18,10 @@ export const Todo = ({ todo, onDelete }) => {
       tabIndex="0"
       onKeyDown={handleKeyDown}
     >
-      <p className="todo-item__text">{todo.text}</p>
+      <p className="todo-item__text">{text}</p>
       <button className="todo-item__button" onClick={handleDelete}>
         X
       </button>
     </li>
   );
-};
+});
