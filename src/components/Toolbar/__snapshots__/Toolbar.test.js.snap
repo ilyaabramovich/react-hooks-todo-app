@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders 1`] = `
+<DocumentFragment>
+  <div
+    class="toolbar page__toolbar"
+  >
+    <span
+      aria-label="TODO counter"
+    >
+      1 item left
+    </span>
+    <button
+      class="button toolbar__button"
+    >
+      Clear all
+    </button>
+  </div>
+</DocumentFragment>
+`;

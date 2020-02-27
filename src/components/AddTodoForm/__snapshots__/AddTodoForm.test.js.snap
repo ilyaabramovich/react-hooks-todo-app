@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders 1`] = `
+<DocumentFragment>
+  <form
+    class="add-todo-form"
+    data-testid="form"
+  >
+    <div
+      class="add-todo-form__control"
+    >
+      <input
+        class="input add-todo-form__input add-todo-form__input_fullwidth"
+        placeholder="New thing to do"
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      class="button add-todo-form__button add-todo-form__button_fullwidth"
+      disabled=""
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+</DocumentFragment>
+`;
