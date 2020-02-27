@@ -19,6 +19,7 @@ export const AddTodoForm = ({ onSubmit }) => {
       <div className="add-todo-form__control">
         <input
           autoFocus
+          aria-label="New thing to do"
           className="input add-todo-form__input add-todo-form__input_fullwidth"
           type="text"
           value={text}

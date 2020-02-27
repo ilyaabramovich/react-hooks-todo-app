@@ -19,7 +19,11 @@ export const Todo = memo(function Todo({ id, text, onDelete }) {
       onKeyDown={handleKeyDown}
     >
       <p className="todo-item__text">{text}</p>
-      <button className="todo-item__button" onClick={handleDelete}>
+      <button
+        aria-label="Close"
+        className="todo-item__button"
+        onClick={handleDelete}
+      >
         X
       </button>
     </li>
