@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Toolbar } from "./Toolbar";
 
 test("it renders", () => {
@@ -7,7 +7,7 @@ test("it renders", () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-// test("displays items count correctly", () => {
-//   const { getByLabelText } = render(<Toolbar count={1} />);
-//   expect(getByLabelText("TODO counter")).toHaveTextContent("1 item left");
-// });
+test("displays items count correctly", () => {
+  const { getByLabelText } = render(<Toolbar count={1} />);
+  expect(getByLabelText("TODO counter")).toHaveTextContent("1 item left");
+});
