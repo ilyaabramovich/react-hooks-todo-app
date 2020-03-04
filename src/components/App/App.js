@@ -13,7 +13,7 @@ export const App = () => {
   };
 
   const handleDelete = useCallback(id => {
-    setTodos(todos.filter(todo => todo.id !== id));
+    setTodos(todos => todos.filter(todo => todo.id !== id));
     // eslint-disable-next-line
   }, []);
 
